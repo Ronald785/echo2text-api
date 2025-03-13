@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech To Text API - Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        pre {
+            background: #222;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Speech To Text API</h1>
+        <p>To transcribe an audio file, send a <strong>POST</strong> request to the endpoint below with the audio file
+            attached.</p>
+
+        <h2>How to Use</h2>
+        <ul>
+            <li><strong>Method:</strong> POST</li>
+            <li><strong>Endpoint:</strong> <code>/transcribe</code></li>
+            <li><strong>Content-Type:</strong> <code>multipart/form-data</code></li>
+            <li><strong>Form field name:</strong> <code>audio</code></li>
+            <li><strong>Supported formats:</strong> flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, webm</li>
+            <li><strong>Max file size:</strong> 100MB</li>
+        </ul>
+
+        <h2>Example using cURL</h2>
+        <pre>
+curl -X POST http://localhost:3000/transcribe \
+     -H "Content-Type: multipart/form-data" \
+     -F "audio=@path/to/audio/file.mp3"
+        </pre>
+    </div>
+</body>
+
+</html>

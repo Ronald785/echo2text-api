@@ -1,9 +1,12 @@
+import path from "path";
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
 import morgan from "morgan";
+import transcriptionRoute from "./app/routes/routes.js";
+import __dirname from "./app/utils/__dirname.js";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -22,13 +25,15 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
-    res.send("Welcome to Speech To Text");
+    res.sendFile(path.join(__dirname, "view", "index.html"));
 });
 
 app.use((err, req, res, next) => {
     console.error("Error: ", err);
     res.status(500).json({ error: "Internal Server Error" });
 });
+
+app.use("/transcribe", transcriptionRoute);
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
