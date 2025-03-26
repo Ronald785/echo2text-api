@@ -1,4 +1,4 @@
-# Speech-To-Text API
+# Echo2Text
 
 <p align="center">
   <img alt="Echo2Text" src="public/img/homepage.png" width="70%">
