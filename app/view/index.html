@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speech To Text API - Documentation</title>
+    <title>Echo2Text - Documentation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,7 +50,7 @@
 
 <body>
     <div class="container">
-        <h1>Welcome to the Speech To Text API</h1>
+        <h1>Welcome to the Echo2Text API</h1>
         <p>To transcribe an audio file, send a <strong>POST</strong> request to the endpoint below with the audio file
             attached.</p>
 
@@ -66,7 +66,7 @@
 
         <h2>Example using cURL</h2>
         <pre>
-curl -X POST http://localhost:3000/transcribe \
+curl -X POST http://localhost:3000 \
      -H "Content-Type: multipart/form-data" \
      -F "audio=@path/to/audio/file.mp3"
         </pre>

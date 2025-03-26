@@ -13,10 +13,6 @@ if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "view", "index.html"));
-});
-
 const allowedTypes = [
     "audio/flac",
     "audio/mpeg",
