@@ -1,7 +1,7 @@
 # Speech-To-Text API
 
 <p align="center">
-  <img alt="Echo2Text" src="public/img/homepage.PNG" width="70%">
+  <img alt="Echo2Text" src="public/img/homepage.png" width="70%">
 </p>
 
 ## Description
