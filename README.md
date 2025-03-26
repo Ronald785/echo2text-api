@@ -1,7 +1,7 @@
-# Echo2Text
+# Vox2Text
 
 <p align="center">
-  <img alt="Echo2Text" src="public/img/homepage.png" width="70%">
+  <img alt="Vox2Text" src="public/img/homepage.png" width="70%">
 </p>
 
 ## Description
@@ -49,7 +49,7 @@ An API to convert speech to text using OpenAI's Whisper model. It allows for fas
 ### Transcription Endpoint
 
 -   **Method:** POST
--   **Route:** `/transcribe`
+-   **Route:** `/`
 -   **Content-Type:** `multipart/form-data`
 -   **Parameter:** `audio` (audio file to be transcribed)
 -   **Supported Formats:** `flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, webm`
@@ -58,7 +58,7 @@ An API to convert speech to text using OpenAI's Whisper model. It allows for fas
 ### Example Request with cURL
 
 ```sh
-curl -X POST http://localhost:3000/transcribe \
+curl -X POST http://localhost:3000/ \
      -H "Content-Type: multipart/form-data" \
      -F "audio=@path/to/file.mp3"
 ```
